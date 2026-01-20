@@ -1,5 +1,0 @@
-vessel_id,vessel_type,engine_power_kw,fuel_type,max_depth_m,load_capacity_tons
-V001,Cargo,18000,Diesel,,50000
-V002,Submarine,32000,Nuclear,500,0
-V003,Tanker,25000,LNG,,70000
-V004,Naval,28000,Diesel,,15000
