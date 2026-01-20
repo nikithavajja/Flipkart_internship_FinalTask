@@ -1,0 +1,4 @@
+vessel_id,timestamp,fuel_used_lph,fuel_per_nm,fuel_cost_usd,load_weight_tons
+V001,2024-01-01 01:00,180,9.5,210,42000
+V002,2024-01-01 02:00,120,7.2,150,0
+
