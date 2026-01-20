@@ -1,0 +1,130 @@
+Title: Maritime Performance Analytics & Sea-Route Risk Assessment System for Ships/Submarines
+1. Project Overview
+The Maritime Performance Analytics & Sea-Route Risk Assessment System is a comprehensive data analytics project designed to analyze ship and submarine operational performance using multi-source maritime datasets.
+The project integrates navigation logs, environmental conditions, fuel consumption data, and maintenance records to evaluate vessel efficiency, fuel usage, weather impact, sea-route risks, and operational delays.
+This project focuses purely on Data Analytics and Statistical Modeling, without mandatory machine learning, and provides actionable insights through visual dashboards.
+2. Objectives
+•	Clean and preprocess multi-source maritime datasets
+•	Integrate navigation, fuel, environmental, and maintenance data
+•	Analyze ship and submarine performance metrics
+•	Evaluate fuel consumption and engine efficiency
+•	Assess weather impact on navigation and delays
+•	Identify high-risk sea routes
+•	Analyze submarine depth vs speed efficiency
+•	Build an interactive dashboard for maritime insights
+3. Dataset Details
+The project uses multiple cleaned datasets merged into a unified master table.
+Key Datasets:
+•	Ship Specifications Dataset
+•	Navigation Logs Dataset
+•	Environmental Conditions Dataset
+•	Fuel Consumption Logs
+•	Maintenance & Incident Logs
+Master Dataset:
+maritime_master_dataset.csv
+Important Columns:
+•	vessel_id
+•	vessel_type
+•	speed_knots
+•	fuel_used_lph
+•	distance_nm
+•	depth_m
+•	wave_height_m
+•	wind_speed_knots
+•	storm_probability
+•	course_deviation_deg
+•	maintenance_type
+•	incident_type
+4. Data Cleaning Steps
+•	Removal of duplicate records
+•	Handling missing values using forward-fill methods
+•	Standardizing timestamp and coordinate formats
+•	Validating numerical ranges (speed, depth, fuel)
+•	Separating submarine-specific depth data
+•	Saving cleaned datasets into processed folder
+5. Feature Engineering
+The following analytical features were created:
+•	Nautical Miles per Liter
+•	Fuel Efficiency Score
+•	Engine Health Score
+•	Vessel Utilization Rate
+•	Depth-Speed Efficiency Index (Submarines)
+•	Environmental Delay Hours
+•	Sea-Route Risk Score
+•	Risk Category (Low / Medium / High)
+6. Analytical Models (Non-ML)
+Fuel Efficiency Model
+•	Measures distance traveled per unit fuel
+•	Normalized efficiency score (0–100)
+Engine Health Model
+•	Based on RPM variance and maintenance frequency
+Delay Impact Model
+•	Weather-based delay estimation using wave height, wind speed, storm probability
+Sea-Route Risk Model
+•	Composite risk score using environmental and navigation indicators
+Depth-Speed Efficiency Model (Submarines)
+•	Evaluates optimal underwater operational depths
+7. Exploratory Data Analysis (EDA)
+Key analyses performed:
+•	Vessel speed vs wave height
+•	Fuel consumption vs load weight
+•	Submarine depth vs speed trends
+•	Weather impact on route deviation
+•	Maintenance frequency by vessel type
+•	Risk-prone sea corridor identification
+•	Correlation heatmaps of numerical variables
+Generated visualizations include:
+•	Bar charts
+•	Histograms
+•	Heatmaps
+•	Bubble charts
+•	Line graphs
+8. Dashboard
+A Streamlit-based interactive dashboard was developed to:
+•	Display vessel KPIs
+•	Visualize fuel consumption trends
+•	Analyze depth vs speed for submarines
+•	Monitor sea-route risk levels
+•	Compare performance across vessel types
+9. Folder Structure
+Maritime_Performance_Analytics/
+│
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   └── maritime_master_dataset.csv
+│
+├── models/
+│   └── maritime_performance_models.py
+│
+├── scripts/
+│   ├── data_cleaning_script.py
+│   ├── merge_master_dataset.py
+│   └── eda_analysis.py
+│
+├── dashboard.py
+├── requirements.txt
+└── README.md
+
+10. How to Run
+1.	Navigate to project folder
+2.	Clean data:
+3.	python data_cleaning_script.py
+4.	Merge datasets:
+5.	python merge_master_dataset.py
+6.	Perform EDA:
+7.	python eda_analysis.py
+8.	Launch dashboard:
+9.	streamlit run dashboard.py
+Recommended Tools
+•	pandas, numpy
+•	matplotlib, seaborn
+•	folium (marine map routes)
+•	geopandas
+•	openpyxl
+•	tabulate
+•	Streamlit / Power BI / Tableau
+Conclusion
+This project demonstrates how integrated maritime data analytics can improve operational efficiency, reduce fuel costs, enhance safety, and optimize sea-route planning for ships and submarines.
+
+
