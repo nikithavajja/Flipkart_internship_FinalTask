@@ -1,0 +1,7 @@
+vessel_id,maintenance_type,failure_code,repair_hours,incident_type,risk_category
+V001,Engine,302,12,Minor,Medium
+V002,Electrical,410,36,Major,High
+V003,Hull,501,18,Minor,Low
+V004,Navigation,205,5,Minor,Low
+V005,Engine,305,8,Minor,Medium
+V006,Electrical,412,48,Major,High
